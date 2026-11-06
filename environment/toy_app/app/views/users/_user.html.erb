@@ -1,0 +1,17 @@
+<div id="<%= dom_id user %>">
+  <div>
+    <strong>Name:</strong>
+    <%= user.name %>
+  </div>
+
+  <div>
+    <strong>Email:</strong>
+    <%= user.email %>
+  </div>
+
+  <div>
+    <strong>Microposts:</strong>
+    <%= user.microposts.first.content if user.microposts.any? %>
+  </div>
+
+</div>
