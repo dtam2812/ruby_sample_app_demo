@@ -57,6 +57,8 @@ test:
 production:
   primary: &primary_production
     <<: *default
+    host: <%= ENV["DB_HOST"] %>
+    port: <%= ENV.fetch("DB_PORT") { 3306 } %>
     database: sample_app_production
     username: sample_app
     password: <%= ENV["SAMPLE_APP_DATABASE_PASSWORD"] %>
